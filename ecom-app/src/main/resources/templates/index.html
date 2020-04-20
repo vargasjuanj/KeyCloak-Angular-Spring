@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+>
+
+<head>
+
+    <title>Index</title>
+</head>
+<body>
+<br>
+<div sec:authorize="isAnonymous()">
+    <a  href="/sso/login">Login</a>
+</div>
+<br>
+
+<a  href="/api/v1/ecom/products">Products</a>
+
+<div sec:authorize="isAuthenticated()">
+    <h4>User</h4>
+    <span sec:authentication="name" href="#"></span><br><br>
+    <a  href="/api/v1/ecom/suppliers">Suppliers</a>
+<br>
+<a href="/api/v1/ecom/changePassword">Change password</a>
+<br>
+    <a  href="/api/v1/ecom/logout">Logout</a>
+</div>
+</body>
+</html>
