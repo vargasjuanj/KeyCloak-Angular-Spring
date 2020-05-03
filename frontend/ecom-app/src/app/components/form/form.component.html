@@ -1,0 +1,47 @@
+<div class="modal" id="modalProduct" data-backdrop="static" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{edit ? 'Actualizar product' : 'Agregar product'}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+            </div>
+            <div class="modal-body">
+                <form name="formProduct" [formGroup]="formProduct" (ngSubmit)="onSave(formProduct)">
+                    <input type="hidden" name="id" id="id" formControlName="id">
+
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" name="name" id="name" formControlName="name">
+                        <div *ngIf="formProduct.controls['name'].errors?.required">
+                            *campo es requerido
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Price:</label>
+                        <input type="number" class="form-control" name="price" id="price" formControlName="price">
+                        <div *ngIf="formProduct.controls['price'].errors?.required">
+                            *campo es requerido
+                        </div>
+                    </div>
+
+
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="isError">
+                        <p class="alertFont">¡Debes completar todos los campos!</p>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="onCloseAlert()">
+                    <span aria-hidden="true">&times;</span>
+                   </button>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" #btnClose (click)="onClose()">Cerrar</button>
+                        <button type="submit " class="btn btn-primary ">Guardar product</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
