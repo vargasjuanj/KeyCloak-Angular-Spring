@@ -121,7 +121,7 @@ Asegúrese de desactivar la bandera "Temporal" a menos que usted desea que el us
 
 * Una vez logueado, si el usuario por ejemplo tiene el rol de "admin" y desea acceder a la ruta "/suppliers".
  Primero desde Angular se coloca el token en la petición, el servidor products lo analiza y lo autoriza, luego hace una petición al servidor suppliers pasandole el token tambien; este servicio lo valida  y le devuelve la lista de productos al servicio products y products a la app de Angular.
-
+## Flujo
 ![1](https://user-images.githubusercontent.com/48636134/80891200-f0bc2080-8c98-11ea-9e4f-9af7a1183330.png)
 
 ![2](https://user-images.githubusercontent.com/48636134/80891207-fd407900-8c98-11ea-9424-ed5719aa748c.png)
@@ -318,13 +318,13 @@ class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 
 * Importar el realm de la carpeta docs
 
-* Crear por lo menos dos usuarios con sus credenciales. Asignarle a uno el rol "admin" ; al otro usuario asignarlo como "user".
+* Crear por lo menos dos usuarios con sus credenciales. Asignarle a uno el rol "admin".
 
 * Se recomienda primero importar los clientes que usan maven con IntelliJ o STS para cargar bien las dependencias. 
 Después si se quieren iniciar todos los clientes se recomienda con VSCODE para equipos de bajo-medio recursos, habiendo instalado el package de java correspondiente.
 (También se podria optar por un navegador más liviano como Vivaldi)
 
-* Iniciar ecom-app y los dos servicios, aunque sea el products.
+* Iniciar ecom-app y los dos servicios.
 
 * Ir a http://localhost:4200 y probar
 

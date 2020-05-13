@@ -6,32 +6,35 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import frm.utn.services.SupplierService;
 
 import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
+
 @CrossOrigin("*")
 @Controller
 @RequestMapping("api/v1/ecom/suppliers")
 public class SupplierController  {
+
 @Autowired
 SupplierService supplierService;
-
 
 @GetMapping("/")
 @PreAuthorize("hasAnyRole('ROLE_admin')")
 @Transactional
-    public List<Object> suppliers() throws Exception {
+    public ResponseEntity<?> getAll() throws Exception {
         try{
             List<Object> supplierList=supplierService.consumeSuppliers();
-        
-            return supplierList;
+            return ResponseEntity.status(HttpStatus.OK).body(supplierList);
+ 
         }catch (Exception e){
-             throw new Exception();
-        }
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            .body("{\"Mi mensaje get todos\": \"" + e.getMessage() + "\"}");        }
             }
 
 }

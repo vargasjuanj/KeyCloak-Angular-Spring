@@ -9,13 +9,14 @@ import { HomeComponent } from './components/home/home.component';
 import { AuthGuard } from './guards/auth.guard';
 import { IsAdminGuard } from './guards/is-admin.guard';
 import { ClientComponent } from './components/client/client.component';
+//import { IsUserGuard } from './guards/is-user.guard';
 
 
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'suppliers', component:SupplierComponent, canActivate:[AuthGuard, IsAdminGuard]},
-  {path:'clients', component:ClientComponent, canActivate:[AuthGuard, IsAdminGuard]},
+  {path:'suppliers', component:SupplierComponent, canActivate:[IsAdminGuard]},
+  {path:'clients', component:ClientComponent, canActivate:[IsAdminGuard]},
   {path:'products',component:ProductComponent, canActivate:[AuthGuard]},
   {path: '**',component: HomeComponent}
 ];

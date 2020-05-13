@@ -15,7 +15,8 @@ public class SupplierController extends ControllerGenerico<Supplier, SupplierSer
     // se restringen unas operaciones y otras no para ciertos roles, no funciona
     // bien..
     // En este caso solo el rol admin va usarlo
-    @PreAuthorize("hasAnyRole('ROLE_admin')")
+
+       @PreAuthorize("hasAnyRole('ROLE_admin')")
     public ResponseEntity<?> getSuppliers() throws Exception {
         System.out.println("ADMIN SOLAMENTE");
 return  this.getAll(); //utiliza el método del generico, ya tiene su path configurado

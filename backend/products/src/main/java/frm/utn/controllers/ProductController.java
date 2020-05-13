@@ -14,16 +14,15 @@ import org.springframework.security.access.prepost.PreAuthorize;
 @CrossOrigin("*")
 @RestController
 @RequestMapping("api/v1/ecom/products")
+@PreAuthorize("isAuthenticated()") //Abarca la clase en general, despues cada metodo puede especificar que rol tiene permiso
 public class ProductController {
    @Autowired
   private ProductService productService;
-   //Utilizo los metodos del controller generico, pero anulo su mapeo, porque un permiso que le de a un generico, va a ser general para todos. Por eso agrego particularmente las rutas en cada controller.
 
- 
-  @GetMapping("/")
-  @PreAuthorize("hasAnyRole('ROLE_admin', 'ROLE_user')")
+  //@PreAuthorize("hasAnyRole('ROLE_admin'.'ROLE_user')")
+  @GetMapping("/") //A este endpoint pueden acceder todos los autenticados, sin importar si tiene o no un rol
   @Transactional
-  public ResponseEntity<?> getClients() throws Exception {
+  public ResponseEntity<?> getAll() throws Exception {
    try{
      return ResponseEntity.status(HttpStatus.OK).body(productService.findAll());
  
@@ -85,7 +84,7 @@ public class ProductController {
        }
 
    }
-   @PreAuthorize("hasAnyRole('ROLE_admin', 'ROLE_user')")
+   @PreAuthorize("hasAnyRole('ROLE_admin')")
    @GetMapping("/{id}")
    @Transactional
    public ResponseEntity<?> getOne(@PathVariable long id) {
@@ -102,4 +101,5 @@ public class ProductController {
        }
 
    }
+
 }

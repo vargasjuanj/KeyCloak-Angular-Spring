@@ -12,7 +12,7 @@ export class SupplierService extends CommonService<Supplier>{
 
   constructor(http: HttpClient) {
     super(http);
-    this.baseUrl = "http://localhost:8082/api/v1/ecom/suppliers/";
+    this.baseUrl = "http://localhost:8081/api/v1/ecom/suppliers/";
 
   }
 
