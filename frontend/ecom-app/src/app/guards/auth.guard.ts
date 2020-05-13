@@ -12,7 +12,8 @@ constructor(private keycloakSecurityService:KeycloakSecurityService){}
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if (!this.keycloakSecurityService.keycloak.authenticated) {
+
+      if (!this.keycloakSecurityService.keycloak.authenticated) {
       console.log('No estás logueado');
      this.keycloakSecurityService.keycloak.login()
       return false;

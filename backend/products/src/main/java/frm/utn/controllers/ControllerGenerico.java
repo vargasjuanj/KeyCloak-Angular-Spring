@@ -10,6 +10,7 @@ import javax.transaction.Transactional;
 
 
 public class ControllerGenerico<E, S extends IservicioGenerico<E>> {
+    /*
     @Autowired
     protected S service;
 @GetMapping("/count")
@@ -110,5 +111,5 @@ public class ControllerGenerico<E, S extends IservicioGenerico<E>> {
         }
 
     }
-
+*/
 }

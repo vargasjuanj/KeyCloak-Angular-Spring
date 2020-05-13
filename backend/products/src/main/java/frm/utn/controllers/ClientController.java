@@ -23,7 +23,7 @@ public class ClientController {
   @GetMapping("/")
   @PreAuthorize("hasAnyRole('ROLE_admin')")
   @Transactional
-  public ResponseEntity<?> getClients() throws Exception {
+  public ResponseEntity<?> getAll() throws Exception {
   try{
     return ResponseEntity.status(HttpStatus.OK).body(clientService.findAll());
 
