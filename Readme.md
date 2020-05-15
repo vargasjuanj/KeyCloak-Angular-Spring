@@ -121,7 +121,7 @@ Asegúrese de desactivar la bandera "Temporal" a menos que usted desea que el us
 
 * Una vez logueado, si el usuario por ejemplo tiene el rol de "admin" y desea acceder a la ruta "/suppliers".
  Primero desde Angular se coloca el token en la petición, el servidor products lo analiza y lo autoriza, luego hace una petición al servidor suppliers pasandole el token tambien; este servicio lo valida  y le devuelve la lista de productos al servicio products y products a la app de Angular.
-## Flujo
+### Flujo
 ![1](https://user-images.githubusercontent.com/48636134/80891200-f0bc2080-8c98-11ea-9e4f-9af7a1183330.png)
 
 ![2](https://user-images.githubusercontent.com/48636134/80891207-fd407900-8c98-11ea-9424-ed5719aa748c.png)

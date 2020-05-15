@@ -85,4 +85,5 @@ class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
         return new KeycloakRestTemplate(keycloakClientRequestFactory);
 
     }
+    
 }
