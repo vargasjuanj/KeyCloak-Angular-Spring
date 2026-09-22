@@ -1,10 +1,12 @@
-# Keycloak Full Stack: Seguridad Corporativa con Spring Boot y Angular
+## Profesor: Alberto Cortez, Metodología de Sistemas, UTN-FRM
 
-Arquitectura integral de autenticación y autorización corporativa utilizando **Keycloak (OAuth2 / OIDC)** como servidor de identidad, **Spring Boot** como Resource Server y **Angular** con adaptadores, interceptores HTTP y Route Guards.
+# Inicio
 
-📺 **Serie práctica en YouTube:** [Ver Playlist de 14 videos paso a paso](https://www.youtube.com/playlist?list=PLxD7UVJ_L1lSoBUlvVzxP3wqGvuFS5S23)
+* Comenzar con la [traducción](https://drive.google.com/file/d/1AhMXfzudg55LcnimpdAS2cWBEhW4d8xI/view) de [Sole](https://github.com/SoledadChinigioli)
 
----
+* En el Frontend se usó el [ABMC](https://github.com/Florsalcedowd/abmGenerico) de Flor.
+
+* El código de este proyecto es una mezcla de varias tutoriales y otras modificaciones.
 
 # Asegurar un Reino, Territorio o Realm
 
