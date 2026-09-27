@@ -1,12 +1,11 @@
-## Profesor: Alberto Cortez, Metodología de Sistemas, UTN-FRM
+# Keycloak Full Stack Security: Spring Boot & Angular
 
-# Inicio
+Guía práctica y repositorio de referencia para la integración de **Keycloak** como Identity and Access Management (IAM) con **Spring Boot** (OAuth2 / Resource Server / JWT) y **Angular** (Single Page Application con Guards e Interceptores HTTP).
 
-* Comenzar con la [traducción](https://drive.google.com/file/d/1AhMXfzudg55LcnimpdAS2cWBEhW4d8xI/view) de [Sole](https://github.com/SoledadChinigioli)
+Este repositorio acompaña a la serie práctica paso a paso en YouTube:  
+📺 **[Ver lista de reproducción completa en YouTube](https://www.youtube.com/playlist?list=PLxD7UVJ_L1lSoBUlvVzxP3wqGvuFS5S23)**
 
-* En el Frontend se usó el [ABMC](https://github.com/Florsalcedowd/abmGenerico) de Flor.
-
-* El código de este proyecto es una mezcla de varias tutoriales y otras modificaciones.
+---
 
 # Asegurar un Reino, Territorio o Realm
 
